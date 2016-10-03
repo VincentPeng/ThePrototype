@@ -11,16 +11,22 @@ public class GroundCheck : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {
-		hero.grounded = true;
+		if (col.CompareTag("Floor")) {
+			hero.grounded = true;
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D col) {
-		hero.grounded = true;
+		if (col.CompareTag("Floor")) {
+			hero.grounded = true;
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D col) {
-		hero.grounded = false;
-		hero.canDoubleJump = true;
+		if (col.CompareTag("Floor")) {
+			hero.grounded = false;
+			hero.canDoubleJump = true;
+		}
 	}
 
 }

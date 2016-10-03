@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour {
 
 	public float jumpPower = 300.0f;
 	public bool grounded = true;
 	public bool canDoubleJump = true;
+
+	public int curHealth = 5;
+	public int maxHealth = 5;
+
 	private Rigidbody2D rb2d;
 	private Animator anim;
 	private bool canTouch = false;
@@ -15,6 +20,8 @@ public class Hero : MonoBehaviour {
 	void Start() {
 		rb2d = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
+
+		curHealth = maxHealth;
 	}
 
 	void Update() {
@@ -33,6 +40,7 @@ public class Hero : MonoBehaviour {
 				if (grounded) {
 					canDoubleJump = true;
 					rb2d.AddForce(Vector2.up * jumpPower);
+					grounded = false;
 				} else if (canDoubleJump) {
 					canDoubleJump = false;
 					rb2d.velocity = new Vector2(0, 0);
@@ -42,6 +50,18 @@ public class Hero : MonoBehaviour {
 				// Once finger leaves, user can click again
 				canTouch = true;
 			}
+		}
+	}
+
+	void Die() {
+		print("Die");
+		SceneManager.LoadScene("Main");
+	}
+
+	public void GetDamage(int damage) {
+		curHealth -= damage;
+		if (curHealth <= 0) {
+			Die();
 		}
 	}
 }
