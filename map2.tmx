@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="36" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="wall" tilewidth="16" tileheight="16" tilecount="1" columns="1">
+  <image source="Assets/Image/tile.jpg" width="16" height="16"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="2" x="-0.048913" y="-0.048913" width="16.0652" height="16.038"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="2" name="wall" tilewidth="16" tileheight="16" tilecount="1" columns="1">
+  <image source="Assets/Image/tile.jpg" width="16" height="16"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="2" x="-0.048913" y="-0.048913" width="16.0652" height="16.038"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="64" height="36">
+  <data encoding="base64" compression="zlib">
+   eJzt1sEJAAAIA7G6/9JuIaIp3AD5tZKUJOX++Pn5+fn5+fn5+bf4J346Pz8/Pz8/Pz8/Pz8/vyRJf2rjgQQj
+  </data>
+ </layer>
+</map>

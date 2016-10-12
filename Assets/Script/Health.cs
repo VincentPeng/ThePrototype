@@ -10,12 +10,12 @@ public class Health : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start() {
-		healthUI = GetComponent<Image>();
-	}
-	
-	// Update is called once per frame
-	void Update() {
-		healthUI.sprite = healthSprites[hero.curHealth];
-	}
+	//	void Start() {
+	//		healthUI = GetComponent<Image>();
+	//	}
+	//
+	//	// Update is called once per frame
+	//	void Update() {
+	//		healthUI.sprite = healthSprites[hero.curHealth];
+	//	}
 }

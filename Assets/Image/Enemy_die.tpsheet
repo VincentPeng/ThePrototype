@@ -1,0 +1,21 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:358c074cbf9414314133ea901e813d89:4fd2030b380a49c7676e855c7241d34b:0e9503a35456474b45d9c1ae99dd82fc$
+#
+:format=40000
+:texture=Enemy_die.png
+:size=1024x2048
+:pivotpoints=enabled
+
+die_1;1;1755;444;292;0.5;0.5
+die_2;447;1755;444;292;0.5;0.5
+die_3;1;1461;444;292;0.5;0.5
+die_4;447;1461;444;292;0.5;0.5
+die_5;1;1167;444;292;0.5;0.5
+die_6;447;1167;444;292;0.5;0.5
+die_7;1;873;444;292;0.5;0.5
+die_8;447;873;444;292;0.5;0.5
