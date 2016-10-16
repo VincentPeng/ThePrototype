@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a741bd8350e1f4729b160065adedccc8
-timeCreated: 1476052489
+timeCreated: 1476506743
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,7 @@ TextureImporter:
     21300008: Enemy_attack_4
     21300010: Enemy_attack_5
     21300012: Enemy_attack_6
+    21300014: Enemy_attack_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,12 +64,12 @@ TextureImporter:
       name: Enemy_attack_0
       rect:
         serializedVersion: 2
-        x: 155
-        y: 1729
-        width: 217
-        height: 319
-      alignment: 9
-      pivot: {x: 0.35052195, y: 0}
+        x: 85
+        y: 1728
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -76,25 +77,12 @@ TextureImporter:
       name: Enemy_attack_1
       rect:
         serializedVersion: 2
-        x: 533
-        y: 1729
-        width: 196
-        height: 312
-      alignment: 9
-      pivot: {x: 0.3217761, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Enemy_attack_2
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 1402
-        width: 215
-        height: 312
-      alignment: 9
-      pivot: {x: 0.82494676, y: 0}
+        x: 448
+        y: 1728
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -102,12 +90,12 @@ TextureImporter:
       name: Enemy_attack_3
       rect:
         serializedVersion: 2
-        x: 374
-        y: 1402
-        width: 262
-        height: 187
-      alignment: 9
-      pivot: {x: 0.83331835, y: 0}
+        x: 27
+        y: 1401
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -115,12 +103,12 @@ TextureImporter:
       name: Enemy_attack_4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1072
-        width: 254
-        height: 184
-      alignment: 9
-      pivot: {x: 0.82416993, y: 0}
+        x: 372
+        y: 1401
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -128,12 +116,12 @@ TextureImporter:
       name: Enemy_attack_5
       rect:
         serializedVersion: 2
-        x: 407
-        y: 1076
-        width: 229
-        height: 198
-      alignment: 9
-      pivot: {x: 0.8050812, y: 0}
+        x: 0
+        y: 1071
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -141,12 +129,25 @@ TextureImporter:
       name: Enemy_attack_6
       rect:
         serializedVersion: 2
-        x: 65
-        y: 748
-        width: 200
-        height: 263
-      alignment: 9
-      pivot: {x: 0.79941505, y: 0}
+        x: 345
+        y: 1073
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Enemy_attack_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 751
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

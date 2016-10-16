@@ -5,7 +5,7 @@ public class Spawner : MonoBehaviour {
 
 	private const int max_level = 20;
 	public Transform floor;
-	private float curY = -80f;
+	private float curY = -70f;
 	private const float distance = 20f;
 	private long level = 0;
 

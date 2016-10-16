@@ -4,18 +4,20 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
 
-	public Sprite[] healthSprites;
-	private Image healthUI;
+	private Image health;
 	public Hero hero;
 
 
-	// Use this for initialization
-	//	void Start() {
-	//		healthUI = GetComponent<Image>();
-	//	}
-	//
-	//	// Update is called once per frame
-	//	void Update() {
-	//		healthUI.sprite = healthSprites[hero.curHealth];
-	//	}
+	void Start() {
+		health = GetComponent<Image>();
+	}
+	
+	// Update is called once per frame
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.W)) {
+			health.fillAmount -= 0.1f;
+		} else if (Input.GetKeyDown(KeyCode.R)) {
+			health.fillAmount += 0.1f;
+		}
+	}
 }

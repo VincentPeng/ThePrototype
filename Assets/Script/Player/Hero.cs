@@ -22,50 +22,20 @@ public class Hero : MonoBehaviour {
 	private bool isLeftButtonDown = false;
 	private bool isRightButtonDown = false;
 	private bool isJumpButtonClick = false;
-	//private bool isAttackButtonClick = false;
-	private bool isAttacking = false;
-
-	private float attackCd = 1;
-	private float attackTimer = 0;
-
-	public Collider2D attackTrigger;
 
 	// Use this for initialization
 	void Start() {
 		rb2d = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
-		attackTrigger.enabled = false;
 		curHealth = maxHealth;
 	}
 
 	void Update() {
-		anim.SetBool("Move", isMoving);
 		anim.SetBool("Grounded", grounded);
+		anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
 	}
 
-
 	void FixedUpdate() {
-//		if (Input.touchCount > 0) { 
-//			Touch touch = Input.touches[0];
-//
-//			if (touch.phase == TouchPhase.Began && canTouch) {
-//				// Make sure this will only be called once in one click.
-//				canTouch = false;
-//				if (grounded) {
-//					canDoubleJump = true;
-//					rb2d.AddForce(Vector2.up * jumpPower * rb2d.gravityScale);
-//					grounded = false;
-//				} else if (canDoubleJump) {
-//					canDoubleJump = false;
-//					rb2d.velocity = new Vector2(0, 0);
-//					rb2d.AddForce(Vector2.up * jumpPower * 1.5f * rb2d.gravityScale);
-//					rb2d.gravityScale *= -1;
-//				}				
-//			} else if (touch.phase == TouchPhase.Ended) {
-//				// Once finger leaves, user can click again
-//				canTouch = true;
-//			}
-//		}
 
 		if (isJumpButtonClick) {
 			isJumpButtonClick = false;
@@ -89,34 +59,13 @@ public class Hero : MonoBehaviour {
 			rb2d.velocity = new Vector2(0, rb2d.velocity.y);
 		}
 
-		if (isAttacking) {
-			attackTimer -= Time.deltaTime;
-			if (attackTimer < 0) {
-				isAttacking = false;
-				attackTimer = 0;
-				attackTrigger.enabled = false;
-			}
-		}
 	}
 
-	void Die() {
+	public void Die() {
 		print("Die");
-		SceneManager.LoadScene("Main");
+		LevelManager.RestartGame();
 	}
 
-	public void Attack() {
-		//if (isAttackButtonClick) {
-		if (isAttacking) {
-			// Ignore
-		} else {
-			isAttacking = true;
-			attackTrigger.enabled = true;
-			attackTimer = attackCd;
-			anim.SetTrigger("Attack");
-		}
-
-		//}
-	}
 
 	public void GetDamage(int damage) {
 		curHealth -= damage;
